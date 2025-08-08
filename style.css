@@ -1,0 +1,733 @@
+/* Basic Reset & Fonts */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5; /* Light grey background for the page */
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif; /* Use Oswald for headings */
+    color: #1a237e; /* Dark blue for headings */
+}
+
+a {
+    text-decoration: none;
+    color: #1a237e;
+}
+
+    a:hover {
+        color: #3f51b5;
+    }
+
+/* --- Global Utilities --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #ffd700; /* Gold */
+    color: #1a237e; /* Dark blue */
+}
+
+    .btn-primary:hover {
+        background-color: #ffc107; /* Darker gold */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+.btn-secondary {
+    background-color: #1a237e; /* Dark blue */
+    color: white;
+    border: 2px solid #1a237e;
+}
+
+    .btn-secondary:hover {
+        background-color: #3f51b5; /* Lighter blue */
+        border-color: #3f51b5;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+.section-description {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: #1a237e; /* Dark blue */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-logo {
+    height: 40px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+    .nav-links li {
+        margin-left: 30px;
+    }
+
+    .nav-links a {
+        color: white;
+        font-weight: 400;
+        transition: color 0.3s ease;
+        padding: 5px 0; /* Make clickable area larger */
+    }
+
+        .nav-links a:hover {
+            color: #ffd700; /* Gold hover */
+        }
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+    .hamburger .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(rgb(238, 238, 238), rgb(238, 238, 238)), url('hero_background.jpg') no-repeat center center/cover; /* Placeholder background image */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Ensure sufficient height */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+    .hero-content h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        color: rgb(0, 0, 0); /* Override default heading color */ 
+    } /*dreambig*/
+
+    .hero-content p {
+        font-size: 1.3em;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .hero-content .btn {
+        margin: 0 10px;
+    }
+
+/* --- Main Content Sections (General) --- */
+main {
+    flex-grow: 1; /* Allows main content to fill available space */
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+    section:nth-of-type(even) {
+        background-color: #f9f9f9; /* Alternate background for sections */
+    }
+
+    section h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #ffd700; /* Gold underline */
+            border-radius: 2px;
+        }
+
+/* --- Results Section (Containing the exact table) --- */
+.results-main-section {
+    padding-top: 40px; /* Adjust padding if needed */
+    padding-bottom: 60px;
+}
+
+/* EXACT TABLE STYLING - PRESERVED FROM PREVIOUS RESPONSE */
+/* Ensure the .container for the table is properly centered and styled */
+.results-card {
+    width: 100%;
+    max-width: 600px; /* Matches the image's overall width */
+    margin: 30px auto; /* Centers the card and adds margin */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.header-section {
+    background-color: #1a237e; /* Dark blue background */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #3f51b5;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-text {
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.draw-date {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.draw-no {
+    font-size: 0.8em;
+    margin-right: 10px;
+    opacity: 0.8;
+}
+
+.horse-logo {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.prize-section.top-prizes {
+    background-color: #283593; /* Slightly lighter blue than header */
+    padding: 15px 20px;
+    border-bottom: 2px solid #1a237e;
+}
+
+.prize-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .prize-row:last-child {
+        margin-bottom: 0;
+    }
+
+.prize-label {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 400;
+    width: 35%;
+    text-align: left;
+}
+
+.prize-number {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    width: 65%;
+    text-align: right;
+    background-color: #3949ab;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+    .results-table th,
+    .results-table td {
+        border: 1px solid #ccc;
+        padding: 12px 8px;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .results-table th {
+        background-color: #e0e0e0;
+        color: #333;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        padding: 10px 0;
+        border-bottom: 2px solid #bbb;
+    }
+
+.special-table th {
+    background-color: #e0e0e0;
+}
+
+.consolation-table th {
+    background-color: #e0e0e0;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.jackpot-section {
+    background-color: #e0e0e0;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-top: 2px solid #bbb;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.jackpot-item {
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+}
+
+.jackpot-label {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.jackpot-amount {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #1a237e;
+}
+/* END OF EXACT TABLE STYLING */
+
+.check-past-results {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* --- Info Sections (How to Play, News, About Us) --- */
+.info-section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.info-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+    .info-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .info-card h3 {
+        font-size: 1.6em;
+        color: #3f51b5; /* Lighter blue for card headings */
+        margin-bottom: 15px;
+    }
+
+    .info-card p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #666;
+    }
+
+/* Latest News Section Specifics */
+.latest-news-section {
+    background-color: #eef2f7; /* Slightly different background for news */
+}
+
+.news-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.news-item {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    border-left: 5px solid #ffd700; /* Gold accent */
+}
+
+    .news-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .news-item h3 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        color: #1a237e;
+    }
+
+    .news-item .news-date {
+        font-size: 0.9em;
+        color: #888;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .news-item p {
+        font-size: 0.95em;
+        line-height: 1.5;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .news-item .read-more {
+        color: #3f51b5;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+        .news-item .read-more:hover {
+            text-decoration: underline;
+        }
+
+/* About Us Section Specifics */
+.about-us-section {
+    padding-bottom: 80px; /* More space at the bottom */
+}
+
+    .about-us-section p {
+        max-width: 900px;
+        margin: 20px auto;
+        font-size: 1.1em;
+        line-height: 1.7;
+        color: #444;
+        text-align: center;
+    }
+
+
+/* --- Footer --- */
+.main-footer {
+    background-color: #222; /* Dark grey */
+    color: white;
+    padding: 50px 20px 20px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.footer-col h3 {
+    color: #ffd700; /* Gold for footer headings */
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.footer-col p,
+.footer-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-col p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+    .footer-col ul li a {
+        color: #bbb;
+        transition: color 0.3s ease;
+    }
+
+        .footer-col ul li a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+.footer-col .social-links {
+    margin-top: 20px;
+}
+
+    .footer-col .social-links a {
+        color: white;
+        font-size: 1.5em;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+        .footer-col .social-links a:hover {
+            color: #ffd700;
+        }
+
+.footer-col .fa-map-marker-alt,
+.footer-col .fa-phone,
+.footer-col .fa-envelope {
+    margin-right: 10px;
+    color: #ffd700;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #bbb;
+}
+
+    .footer-bottom p {
+        margin: 5px 0;
+    }
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; /* Hide regular menu on medium screens */
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a237e;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        padding: 20px 0;
+        border-top: 1px solid #3f51b5;
+    }
+
+        .nav-links.active {
+            display: flex; /* Show when active */
+        }
+
+        .nav-links li {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+    .hamburger {
+        display: flex; /* Show hamburger */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-content .btn {
+        display: block;
+        margin: 15px auto;
+        width: 80%;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    /* Table adjustments from previous response */
+    .results-card {
+        margin: 20px auto;
+    }
+
+    .prize-label {
+        width: 45%;
+        font-size: 1.1em;
+    }
+
+    .prize-number {
+        font-size: 2em;
+        width: 55%;
+    }
+
+    .results-table th,
+    .results-table td {
+        font-size: 1.2em;
+        padding: 8px 4px;
+    }
+
+    .results-table th {
+        font-size: 1em;
+    }
+
+    .jackpot-item {
+        min-width: unset; /* Allow items to stack */
+        width: 100%;
+    }
+
+    .check-past-results .btn {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 1.5em;
+    }
+
+    .nav-logo {
+        height: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .results-table td {
+        font-size: 1em;
+        padding: 6px 3px;
+    }
+
+    .prize-number {
+        font-size: 1.8em;
+    }
+
+    .jackpot-amount {
+        font-size: 1.2em;
+    }
+
+    .info-card h3, .news-item h3 {
+        font-size: 1.2em;
+    }
+
+    .info-card p, .news-item p {
+        font-size: 0.9em;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* Stack columns on very small screens */
+        text-align: center;
+    }
+
+    .footer-col ul {
+        margin-bottom: 20px;
+    }
+
+    .footer-col .social-links {
+        justify-content: center;
+        display: flex;
+    }
+}
