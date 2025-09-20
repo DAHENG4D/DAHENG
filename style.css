@@ -105,6 +105,7 @@ a {
     margin-right: 10px;
 }
 
+
 .nav-links {
     list-style: none;
     margin: 0;
@@ -127,6 +128,21 @@ a {
         .nav-links a:hover {
             color: #ffd700; /* Gold hover */
         }
+
+        .language-switcher {
+    margin-left: 20px;
+}
+
+#lang-select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3f51b5; /* Lighter blue */
+    color: white;
+    cursor: pointer;
+}
+
+        
 
 /* Hamburger Menu for Mobile */
 .hamburger {
