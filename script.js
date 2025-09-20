@@ -1311,11 +1311,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (lang === 'en') {
             document.querySelector('.results-main-section .section-description').textContent = `Here are the latest official results for ${currentDrawDate} .`;
         } else if (lang === 'ms') {
-            document.querySelector('.results-main-section .section-description').textContent = `以下是${currentDrawDate}的最新官方开彩成绩。`;
-        } else if (lang === 'zh') {
             document.querySelector('.results-main-section .section-description').textContent = `Berikut adalah keputusan rasmi terkini untuk ${currentDrawDate} .`;
-        } else if (lang === 'fzh') {
+        } else if (lang === 'zh') {
             document.querySelector('.results-main-section .section-description').textContent = `以下是${currentDrawDate}的最新官方开彩成绩。`;
+        } else if (lang === 'fzh') {
+            document.querySelector('.results-main-section .section-description').textContent = `以下是${currentDrawDate}的最新官方开彩成績。`;
         } else if (lang === 'th') {
             document.querySelector('.results-main-section .section-description').textContent = `นี่คือผลอย่างเป็นทางการล่าสุดสำหรับ${currentDrawDate} 。`;
         } else if (lang === 'fil') {
